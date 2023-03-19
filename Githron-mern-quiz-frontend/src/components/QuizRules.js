@@ -3,8 +3,6 @@ import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const QuizRules = () => {
-
-
     const quizRules = [
         "You Have Only 20 Seconds For Each Question.",
         "Once You Select Any Answer.It Can't Be Undone",
@@ -38,6 +36,8 @@ const QuizRules = () => {
 
     const handleNameChange = (event) => {
         setName(event.target.value);
+        const inputElement = document.querySelector(".warn");
+        inputElement.style.display = "none";
     };
 
     const navigate = useNavigate();
@@ -55,8 +55,12 @@ const QuizRules = () => {
                 console.log("Name field is empty.");
             }
         } else {
-            alert(`${name} already exists.`);
+            // alert(`${name} already exists.`);
             console.log(`${name} already exists`);
+
+            const inputElement = document.querySelector(".warn");
+            inputElement.style.display = "block";
+
             // clear input field if the name is in the database
             setName("");
         }
@@ -65,7 +69,6 @@ const QuizRules = () => {
     //
     if (isLoading) {
         return (
-
             <div>
                 <div
                     aria-label="Orange and tan hamster running in a metal wheel"
@@ -90,7 +93,15 @@ const QuizRules = () => {
                     <div className="spoke"></div>
                 </div>
 
-                <div style={{marginTop: "2rem", textAlign: "center", color: "#ccdae7"}}>Loading...</div>
+                <div
+                    style={{
+                        marginTop: "2rem",
+                        textAlign: "center",
+                        color: "#ccdae7",
+                    }}
+                >
+                    Loading...
+                </div>
             </div>
         );
     }
@@ -104,13 +115,14 @@ const QuizRules = () => {
         <div id="container">
             <div>
                 <h2 className="header">Quiz Rules</h2>
-                <ol>
+                <ol style={{ marginBottom: "2rem" }}>
                     {quizRules.map((rule, index) => (
                         <li key={index}>{rule}</li>
                     ))}
                 </ol>
 
                 <form onSubmit={handleSubmit}>
+                    <div className="warn">username already taken</div>
                     <input
                         style={inputStyle}
                         className="inpX"

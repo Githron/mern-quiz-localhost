@@ -1,22 +1,19 @@
 /* visit fonts.google.com for text fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap");
 
-*
-{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'inter', sans-serif;
+    font-family: "inter", sans-serif;
 }
-body
-{
+body {
     background-color: #0f172a;
     min-height: 100vh;
     display: grid;
     place-items: center;
 }
-#container
-{
+#container {
     border-radius: 10px;
     width: 400px;
     max-height: 100vh;
@@ -25,37 +22,32 @@ body
     background-color: #1e293b;
     color: #d7dade;
 }
-.header
-{
+.header {
     background-color: #1e293b;
     height: 100px;
     display: grid;
     place-items: center;
     font-size: 25px;
-    color: #13C471;
+    color: #13c471;
     font-weight: bold;
     text-shadow: 1px 1px 2px #1b2135ff;
     border-bottom: 1px solid #ffffff20;
 }
-ol
-{
+ol {
     padding: 10px 15px 10px 40px;
 }
-li
-{
+li {
     font-size: 14px;
     margin: 5px 0;
 }
-#start-quiz-wrapper
-{
-    margin-top: .8rem;
+#start-quiz-wrapper {
+    margin-top: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-button
-{
-    background-color: #13C471;
+button {
+    background-color: #13c471;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -66,20 +58,17 @@ button
     color: #1e293b;
     padding: 15px 20px;
 }
-button:hover
-{
-    background-color: #13C471;
+button:hover {
+    background-color: #13c471;
 }
 
-.content
-{
+.content {
     padding: 10px 30px;
     max-height: 400px;
     overflow: auto;
     position: relative;
 }
-.question
-{
+.question {
     color: #ccdae7;
     font-size: 25px;
     font-weight: 700;
@@ -89,15 +78,15 @@ button:hover
     text-align: center;
 }
 
-.question-number{
+.question-number {
     /* margin-right: 6rem; */
     /* position: absolute; */
     color: #354b6f;
     display: flex;
 }
 
-.option,.result-option
-{
+.option,
+.result-option {
     min-height: 40px;
     border-radius: 10px;
     background-color: #0f172a;
@@ -114,62 +103,52 @@ button:hover
     /* text-align: center;
     justify-content: center; */
 }
-.option span,.result-option span
-{   
+.option span,
+.result-option span {
     position: absolute;
     right: 15px;
     border-radius: 5px;
     font-size: 11px;
     font-weight: bold;
-    background-color: #13C471;
+    background-color: #13c471;
     color: #1e293b;
     padding: 5px;
 }
 
-
-.option:hover
-{
+.option:hover {
     background-color: #d8d8d8;
     border: 2px solid #5a5a5a;
     color: #1e293b;
 }
 
-.footer
-{
+.footer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     margin: 15px 0;
 }
-.correct
-{
+.correct {
     background-color: #1bd027;
     color: #1e293b;
 }
-.correct span
-{
+.correct span {
     background: #1e293b;
     color: #1bd027;
 }
 
-.wrong
-{
+.wrong {
     background-color: #ff4343;
     color: #1e293b;
 }
 
-.wrong span
-{
+.wrong span {
     background: #1e293b;
     color: #ff4343;
 }
 
-
-
-#timer
-{
-    padding: 15px 5px; 
+#timer {
+    padding: 15px 5px;
     /* background-color: #ccdae7; */
     display: grid;
     place-items: center;
@@ -178,104 +157,93 @@ button:hover
     font-size: 13px;
     font-weight: 500;
     margin: 10px 0 20px 0;
-    color: #13C471;
+    color: #13c471;
     font-weight: bold;
 }
-.time-over
-{
+.time-over {
     color: #ff4343 !important;
 }
 
-
 /* result page */
 
-#trophy
-{
+#trophy {
     font-size: 100px;
     text-align: center;
     margin: 40px 0;
 }
 
-#trophyImg{
+#trophyImg {
     width: 120px;
 }
-#score
-{
+#score {
     text-align: center;
     font-size: 14px;
 }
-#score b
-{
-    color: #13C471;
+#score b {
+    color: #13c471;
     font-size: 25px;
 }
-.result-score
-{
+.result-score {
     margin-top: 5px;
 }
-#result-footer
-{
+#result-footer {
     display: flex;
     justify-content: center;
     margin-top: 30px;
     border-bottom: 1px solid #ffffff20;
     padding-bottom: 3rem;
 }
-#result-footer button
-{
+#result-footer button {
     margin: 0 10px;
 }
 
-#detailed-result
-{
+#detailed-result {
     background: transparent;
-    color: #13C471;
-    border: 1px solid #13C471;
+    color: #13c471;
+    border: 1px solid #13c471;
 }
-#detailed-result:hover
-{
-    background: #13C471;
+#detailed-result:hover {
+    background: #13c471;
     color: #0f172a;
 }
 
-.usersDisplay{
+.usersDisplay {
     padding: 3rem;
 }
 
-.ph1{
-    color: #13C471;
+.ph1 {
+    color: #13c471;
     margin: 1rem;
 }
 
-.pResult{
-    color: #13C471;
+.pResult {
+    color: #13c471;
 }
 
-#scoreR{
+#scoreR {
     width: 169px;
     text-align: center;
     background-color: #1e293b;
     position: absolute;
     right: 1.2rem;
-    padding: .5rem;
+    padding: 0.5rem;
     color: rgb(190, 190, 190);
     border-radius: 5px;
 }
 
-.headerNresult
-{
+.headerNresult {
     background-color: #1e293b;
     height: 100px;
     display: grid;
     place-items: center;
     font-size: 25px;
-    color: #13C471;
+    color: #13c471;
     font-weight: bold;
     text-shadow: 1px 1px 2px #1b2135ff;
     /* border-top: 1px solid #ffffff20; */
 }
 
-.optionR:hover{
+.optionR:hover {
     min-height: 40px;
     border-radius: 10px;
     background-color: #0f172a;
@@ -295,7 +263,7 @@ button:hover
     justify-content: center; */
 }
 
-.optionR{
+.optionR {
     min-height: 40px;
     border-radius: 10px;
     background-color: #0f172a;
@@ -313,10 +281,69 @@ button:hover
     justify-content: center; */
 }
 
-.inpX{
+.inpX {
     background-color: #1e293b;
     padding: 1rem;
     border: 2px solid #ffffff20;
     border-radius: 5px;
     color: white;
+
+    margin-top: 5rem;
+}
+
+.warn {
+    display: none;
+    text-align: end;
+    margin-right: 7%;
+    margin-bottom: 10px;
+    color: rgb(250, 81, 81);
+}
+
+/* timer countdown animation */
+/* #timer {
+    height: 3em;
+    width: 8em;
+    border: none;
+    border-radius: 10em;
+    background: #016dd9;
+    font-size: 17px;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 500;
+} */
+
+.timerShakeClass {
+    animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
 }

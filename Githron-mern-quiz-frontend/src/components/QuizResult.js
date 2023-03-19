@@ -2,9 +2,24 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Axios from "axios";
 import trophyImg from "./trophy.png";
+
+import { Howl } from 'howler';
+
+import wowMp3 from "../sound/anime wow.mp3"
 // import { pauseSound } from "./sound";
 
 const QuizResult = () => {
+
+  // wow music
+  useEffect(() => {
+  const soundWow = new Howl({
+    src: [wowMp3],
+    volume: .5,
+    autoplay: true,
+    loop: false,
+  });
+});
+
   const [listOfUsers, setListOfUsers] = useState([]);
   const [name, setName] = useState("");
   const [score, setScore] = useState("");
