@@ -144,6 +144,18 @@ const Questions = () => {
     const [timerShakeClass, setTimerShakeClass] = useState("");
 
     useEffect(() => {
+        // Select all the answer options' HTML elements
+        const answerOptions = document.querySelectorAll(".option");
+
+        // Loop through each answer option and reset its innerHTML to its default value
+        answerOptions.forEach((answerOption) => {
+            answerOption.innerHTML =
+                quiz_questions[currentQuestion].options[
+                    answerOption.dataset.optionNumber - 1
+                ];
+        });
+
+        
         const countdown = setInterval(() => {
             if (count > 0) {
                 setCount(count - 1);
@@ -204,6 +216,7 @@ const Questions = () => {
                                             : "auto",
                                     }}
                                     key={index}
+                                    data-option-number={index + 1}
                                     onClick={(event) =>
                                         handleAnswerOptionClick(
                                             option,
