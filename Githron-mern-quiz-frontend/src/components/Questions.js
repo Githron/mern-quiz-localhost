@@ -55,10 +55,18 @@ const Questions = () => {
             nextDiv.style.display = "block";
 
             const correctAnswer = quiz_questions[currentQuestion].answer;
+            // console.log(
+            //     `${name} Question ${currentQuestion + 1}: Answer Selected: ${
+            //         optionNumber + 1
+            //     }. ${option}, Correct Answer: ${correctAnswer}`
+            // );
+
             console.log(
                 `${name} Question ${currentQuestion + 1}: Answer Selected: ${
                     optionNumber + 1
-                }. ${option}, Correct Answer: ${correctAnswer}`
+                }. ${option}, Correct Answer: ${correctAnswer}. ${
+                    quiz_questions[currentQuestion].options[correctAnswer - 1]
+                }`
             );
 
             if (optionNumber + 1 === correctAnswer) {
@@ -67,11 +75,15 @@ const Questions = () => {
                 console.log(`Selected answer is correct!`);
                 // Style the selected answer as green if it is correct
                 event.target.style.backgroundColor = "#13C471";
+                // Add the "you" span to the selected answer
+                event.target.innerHTML = `${option} <span className="you">You are Correct!</span>`;
             } else {
                 soundWrong.play();
                 console.log(`Selected answer is incorrect!`);
                 // Style the selected answer as red if it is incorrect
                 event.target.style.backgroundColor = "#F84A5C";
+                // Add the "you" span to the selected answer
+                event.target.innerHTML = `${option} <span className="you">You</span>`;
 
                 // Style the correct answer as green
                 const options = event.target.parentElement.children;
@@ -80,6 +92,13 @@ const Questions = () => {
                     const optionNumber = i + 1;
                     if (optionNumber === correctAnswer) {
                         optionElem.style.backgroundColor = "#13C471";
+
+                        // add correct answer label span
+                        optionElem.innerHTML = `${
+                            quiz_questions[currentQuestion].options[
+                                correctAnswer - 1
+                            ]
+                        } <span className="correctSpanLabel">Correct Answer</span>`;
                         break;
                     }
                 }
@@ -141,7 +160,6 @@ const Questions = () => {
 
         if (count <= 10 && count > 0) {
             setTimerShakeClass("timerShakeClass");
-
         } else if (count <= 0) {
             setDisableDiv(true); // disable options click
             const timerShake = document.getElementById("timer");
