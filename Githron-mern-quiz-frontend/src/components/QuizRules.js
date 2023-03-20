@@ -38,6 +38,9 @@ const QuizRules = () => {
         setName(event.target.value);
         const inputElement = document.querySelector(".warn");
         inputElement.style.display = "none";
+
+        const inpxShake = document.querySelector(".inpX");
+        inpxShake.classList.remove("inpxShake")
     };
 
     const navigate = useNavigate();
@@ -61,8 +64,10 @@ const QuizRules = () => {
             const inputElement = document.querySelector(".warn");
             inputElement.style.display = "block";
 
+            const inpxShake = document.querySelector(".inpX");
+            inpxShake.classList.add("inpxShake")
             // clear input field if the name is in the database
-            setName("");
+            // setName("");
         }
     };
 
