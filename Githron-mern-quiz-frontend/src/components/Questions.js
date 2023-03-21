@@ -190,7 +190,7 @@ const Questions = () => {
 
     return (
         <div id="container">
-            <div className="header">QUIZ APP</div>
+            <div className="header">MATH QUIZ</div>
 
             <div className="content">
                 <div className="content-wrapper">

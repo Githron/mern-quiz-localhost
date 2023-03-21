@@ -55,12 +55,12 @@ const quiz_questions = [
       options: ["20", "22", "24", "26"],
       answer: 3,
     },
-    // {
-    //   // Question 10
-    //   question: "2 x 9?",
-    //   options: ["16", "18", "20", "22"],
-    //   answer: 2,
-    // },
+    {
+      // Question 10
+      question: "2 x 9?",
+      options: ["16", "18", "20", "22"],
+      answer: 2,
+    },
 
     // // level 2
     // {
